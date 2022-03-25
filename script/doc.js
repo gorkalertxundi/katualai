@@ -7,6 +7,7 @@ window.onload = function loadDataToDocument() {
     document.getElementById("ilea-sec").innerHTML = getParameterByName("ilea");
     document.getElementById("arraza-sec").innerHTML = getParameterByName("arraza");
     document.getElementById("kol-kokapena-sec").innerHTML = getParameterByName("kolonia-kokapena");
+    document.getElementById("cat-image").src = getParameterByName("argazkia");
     //document.getElementById("irteera-data-sec").innerHTML = localStorage.getItem("argazkia");
 
     if(getParameterByName("Ovario-histerectomia")) {
