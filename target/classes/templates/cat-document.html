@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./script/doc.js"></script>
+    <link rel="stylesheet" th:href="@{/css/doc-style.css}">
     <title>JARDUKETA KLINIKOZ KONTROLATUTAKO KOLONIAREN AGIRIA</title>
 </head>
 <body>
@@ -19,10 +18,10 @@
             <h1>TRATATUTAKO ALEAREN IDENTITATE FITXA</h1>
             <div class="row">
                 <div class="column-2">
-                    <p id="sarrera-data-p"><b>Sarrera data: </b><span id="sarrera-data-sec"></span></p>
+                    <p id="sarrera-data-p"><b>Sarrera data: </b><span id="sarrera-data-sec" th:text="${form.sarreraData}"></span></p>
                 </div>
                 <div class="column-2">
-                    <p id="irteera-data-p"><b>Irteera data: </b><span id="irteera-data-sec"></span></p>
+                    <p id="irteera-data-p"><b>Irteera data: </b><span id="irteera-data-sec" th:text="${form.irteeraData}"></span></p>
                 </div>
             </div>
             <hr>
@@ -31,14 +30,14 @@
             <h3 class="text-centered">Katuaren ezaugarriak</h3>
             <div class="row">
                 <div class="column-2">
-                    <img class="center" id="cat-image" src="https://picsum.photos/700/800" alt="cat-photo">
+                    <img class="center" id="cat-image" th:src="@{${form.katuArgazkia}}" alt="cat-photo">
                 </div>
                 <div class="column-2">
-                    <p class="ezaugarriak"><b>Sexua: </b><span id="sexua-sec"></span></p>
-                    <p class="ezaugarriak"><b>Adina: </b><span id="adina-sec"></span></p>
-                    <p class="ezaugarriak"><b>Ilea: </b><span id="ilea-sec"></span></p>
-                    <p class="ezaugarriak"><b>Arraza: </b><span id="arraza-sec"></span></p>
-                    <p class="ezaugarriak"><b>Koloniaren kokapena: </b><span id="kol-kokapena-sec"></span></p>
+                    <p class="ezaugarriak"><b>Sexua: </b><span id="sexua-sec" th:text="${form.sexua}"></span></p>
+                    <p class="ezaugarriak"><b>Adina: </b><span id="adina-sec" th:text="${form.adina}"></span></p>
+                    <p class="ezaugarriak"><b>Ilea: </b><span id="ilea-sec" th:text="${form.ilea}"></span></p>
+                    <p class="ezaugarriak"><b>Arraza: </b><span id="arraza-sec" th:text="${form.arraza}"></span></p>
+                    <p class="ezaugarriak"><b>Koloniaren kokapena: </b><span id="kol-kokapena-sec" th:text="${form.koloniaKokapena}"></span></p>
                 </div>
             </div>
         </div>
@@ -51,16 +50,16 @@
                     <p class="text-center"><b>Emea</b></p>
                     <div class="row">
                         <div class="column-2">
-                            <p>Ovario-histerectomia [<span id="ovario-histerectomia"> </span>]</p>
+                            <p>Ovario-histerectomia [<span id="ovario-histerectomia" th:if="${form.ovarioHisterectomia}">X</span>]</p>
                         </div>
                         <div class="column-2">
-                            <p>Ovariectomia [<span id="ovariectomia"> </span>]</p>
+                            <p>Ovariectomia [<span id="ovariectomia" th:if="${form.ovariectomia}">X</span>]</p>
                         </div>
                     </div>
                 </div>
                 <div class="column-2">
                     <p class="text-center"><b>Arra</b></p>
-                    <p>Orquiectomia [<span id="orquiectomia"> </span>]</p>
+                    <p>Orquiectomia [<span id="orquiectomia" th:if="${form.orquiectomia}">X</span>]</p>
                 </div>
             </div>
             <hr>
@@ -69,10 +68,10 @@
                     <p><b>Belarri-markaketa</b></p>
                 </div>
                 <div class="column-3">
-                    <p>Ezkerrean (Arra) [<span id="arra"> </span>]</p>
+                    <p>Ezkerrean (Arra) [<span id="arra" th:if="${form.belarriEzkerrean}">X</span>]</p>
                 </div>
                 <div class="column-3">
-                    <p>Eskuinean (Emea) [<span id="emea"> </span>]</p>
+                    <p>Eskuinean (Emea) [<span id="emea" th:if="${form.belarriEskuinean}">X</span>]</p>
                 </div>
             </div>
             <hr>
@@ -83,16 +82,16 @@
                 <div class="column-2">
                     <div class="row">
                         <div class="column-2">
-                            <p>Bai [<span id="gaixorik-bai"> </span>]</p>
+                            <p>Bai [<span id="gaixorik-bai" th:if="${form.gaixotasunBai}">X</span>]</p>
                         </div>
                         <div class="column-2">
-                            <p>Ez [<span id="gaixorik-ez"> </span>]</p>
+                            <p>Ez [<span id="gaixorik-ez" th:if="${form.gaixotasunEz}">X</span>]</p>
                         </div>
                     </div>
                 </div>
             </div>
             <p><u>Lorratzen deskribapena:</u></p>
-            <span id="lorratzen-deskribapena"></span>
+            <span id="lorratzen-deskribapena" th:text="${form.lorratzenDeskribapena}"></span>
         </div>
     </section>
     <footer>
@@ -102,17 +101,17 @@
             izango litzateke. Erabaki honen zergaitiak bertan zehaztu beharko dira</b></p>
             <div class="row">
                 <div class="column-3">
-                    <p>Alea aske bizitzeko gai [<span id="bizitzeko-gai"> </span>]</p>
+                    <p>Alea aske bizitzeko gai [<span id="bizitzeko-gai" th:if="${form.bizitzekoGai}">X</span>]</p>
                 </div>
                 <div class="column-3">
-                    <p>Ez gai [<span id="bizitzeko-ez-gai"> </span>]</p>
+                    <p>Ez gai [<span id="bizitzeko-ez-gai" th:if="${form.bizitzekoEzGai}">X</span>]</p>
                 </div>
                 <div class="column-3">
-                    <p>Eutanasiatua [<span id="eutanasiatua"> </span>]</p>
+                    <p>Eutanasiatua [<span id="eutanasiatua" th:if="${form.eutanasiatua}">X</span>]</p>
                 </div>
             </div>
             <p><u>Arrazonamendua:</u></p>
-            <span id="arrazonamendua"></span>
+            <span id="arrazonamendua" th:text="${form.arrazonamendua}"></span>
         </div>
         <div class="row">
             <div class="column-2">
