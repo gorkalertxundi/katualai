@@ -34,8 +34,8 @@
         <datalist id="arraza">
             <option value="Europearra"></option>
         </datalist>
-        <p>Koloniaren kokapena: <input type="text" id="koloniaKokapena" name="koloniaKokapena"></p>
-        <p><b>Katuaren argazkia: </b><input type="file" name="katuArgazkia" id="katuArgazkia"></p>
+        <p>Koloniaren kokapena: <input type="text" id="kolonia-kokapena" name="kolonia-kokapena"></p>
+        <p><b>Katuaren argazkia: </b><input type="file" name="photo" id="argazkia" accept="image/*"></p>
         
 
         <h4>Antzuketa</h4>
@@ -62,7 +62,7 @@
             <textarea id="arrazonamendua" name="arrazonamendua" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>
         
         <br><br>
-        <input type="submit" value="Sortu fitxa">
+        <input type="submit" value="Sortu fitxa" onclick="saveSelectedImage()">
     </form>
 </body>
 </html>
