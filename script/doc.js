@@ -7,7 +7,16 @@ window.onload = function loadDataToDocument() {
     document.getElementById("ilea-sec").innerHTML = getParameterByName("ilea");
     document.getElementById("arraza-sec").innerHTML = getParameterByName("arraza");
     document.getElementById("kol-kokapena-sec").innerHTML = getParameterByName("kolonia-kokapena");
-    document.getElementById("cat-image").src = getParameterByName("argazkia");
+    //document.getElementById("cat-image").src = getParameterByName("argazkia");
+
+    // Recupera los datos de la imagen seleccionada desde LocalStorage
+    const imageData = localStorage.getItem('selectedImage');
+
+    if (imageData) {
+        const imgElement = document.getElementById('cat-image');
+        imgElement.src = imageData;
+    }
+    
     //document.getElementById("irteera-data-sec").innerHTML = localStorage.getItem("argazkia");
 
     if(getParameterByName("Ovario-histerectomia")) {

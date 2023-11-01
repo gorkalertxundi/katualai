@@ -115,3 +115,23 @@ function getBiziEsperantza() {
         }
     }  
 }
+
+function saveSelectedImage() {
+    const fileInput = document.getElementById('argazkia');
+    const selectedFile = fileInput.files[0];
+
+    if (selectedFile) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const imageData = e.target.result;
+
+            // Almacena los datos de la imagen seleccionada en LocalStorage
+            localStorage.setItem('selectedImage', imageData);
+
+            // Redirige a document.html
+            //window.location.href = 'document.html';
+        };
+
+        reader.readAsDataURL(selectedFile);
+    }
+}
