@@ -3,15 +3,13 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./script/form.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <form action="document.html" method="GET">
+    <form action="/catdoc" method="POST">
         <h4>Datak</h4>
-        <p>Sarrera data: <input type="date" name="sarrera-data" id="sarrera-data"></p>
-        <p>Irteera data: <input type="date" name="irteera-data" id="irteera-data"></p>
+        <p>Sarrera data: <input type="date" name="sarreraData" id="sarrera-data"></p>
+        <p>Irteera data: <input type="date" name="irteeraData" id="irteera-data"></p>
         
         <h4>Katuaren ezaugarriak</h4>
         <p>Sexua: <input list="sexua" id="sexua" name="sexua"></p>
@@ -41,24 +39,24 @@
         
 
         <h4>Antzuketa</h4>
-        <section><input type="checkbox" name="Ovario-histerectomia" id="antzuketa-ovario-histerectomia">Ovario-histerectomia</section>
-        <section><input type="checkbox" name="Ovariectomia" id="antzuketa-ovariectomia">Ovariectomia</section>
-        <section><input type="checkbox" name="Orquiectomia" id="antzuketa-orquiectomia">Orquiectomia</section>
+        <section><input type="checkbox" name="ovarioHisterectomia" id="antzuketa-ovario-histerectomia">Ovario-histerectomia</section>
+        <section><input type="checkbox" name="ovariectomia" id="antzuketa-ovariectomia">Ovariectomia</section>
+        <section><input type="checkbox" name="orquiectomia" id="antzuketa-orquiectomia">Orquiectomia</section>
 
         <h4>Belarri-markaketa</h4>
-        <section><input type="checkbox" name="belarri-ezkerrean" id="belarri-ezkerrean">Ezkerrean (Arra)</section>
-        <section><input type="checkbox" name="belarri-eskuinean" id="belarri-eskuinean">Eskuinean (Emea)</section>
+        <section><input type="checkbox" name="belarriEzkerrean" id="belarri-ezkerrean">Ezkerrean (Arra)</section>
+        <section><input type="checkbox" name="belarriEskuinean" id="belarri-eskuinean">Eskuinean (Emea)</section>
 
         <h4>Gaixotasun baten lorratzak edo sintomak</h4>
-        <section><input type="checkbox" name="gaixotasun-bai" id="gaixotasun-bai">Bai</section>
-        <section><input type="checkbox" name="gaixotasun-ez" id="gaixotasun-ez">Ez</section>
+        <section><input type="checkbox" name="gaixotasunBai" id="gaixotasun-bai">Bai</section>
+        <section><input type="checkbox" name="gaixotasunEz" id="gaixotasun-ez">Ez</section>
         <label for="lorratzen-deskribapena"><u>Lorratzen deskribapena:</u></label><br>
-            <textarea id="lorratzen-deskribapena" name="lorratzen-deskribapena" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>
+            <textarea id="lorratzen-deskribapena" name="lorratzenDeskribapena" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>
         
         <h4>Osasun kontrolaren ondorioak</h4>
         <p>Bizi esperantza</p>
-        <section><input type="checkbox" name="bizitzeko-gai" id="bizitzeko-gai">Bizitzeko gai</section>
-        <section><input type="checkbox" name="bizitzeko-ez-gai" id="bizitzeko-ez-gai">Ez gai</section>
+        <section><input type="checkbox" name="bizitzekoGai" id="bizitzekoGai">Bizitzeko gai</section>
+        <section><input type="checkbox" name="bizitzekoEzGai" id="bizitzekoEzGai">Ez gai</section>
         <section><input type="checkbox" name="eutanasiatua" id="eutanasiatua">Eutanasiatua</section>
         <label for="arrazonamendua"><u>Arrazonamendua:</u></label><br>
             <textarea id="arrazonamendua" name="arrazonamendua" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>

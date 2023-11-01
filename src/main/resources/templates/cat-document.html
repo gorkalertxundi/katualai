@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/doc-style.css}">
+    <title>JARDUKETA KLINIKOZ KONTROLATUTAKO KOLONIAREN AGIRIA</title>
+</head>
+<body>
+    <section>
+        <div class="section">
+            <h1>ORIOKO KALEKO KATUEN &lt;&lt; HARRAPATU ANTZUTU ASKATU (H.A.A./C.E.S) &gt;&gt; PROIEKTUA</h1>
+            <h3>JARDUKETA KLINIKOZ KONTROLATUTAKO KOLONIAREN AGIRIA</h3>
+        </div>
+
+        <div class="section">
+            <h1>TRATATUTAKO ALEAREN IDENTITATE FITXA</h1>
+            <div class="row">
+                <div class="column-2">
+                    <p id="sarrera-data-p"><b>Sarrera data: </b><span id="sarrera-data-sec" th:text="${form.sarreraData}"></span></p>
+                </div>
+                <div class="column-2">
+                    <p id="irteera-data-p"><b>Irteera data: </b><span id="irteera-data-sec" th:text="${form.irteeraData}"></span></p>
+                </div>
+            </div>
+            <hr>
+            
+            <h3 class="text-centered">Katuaren ezaugarriak</h3>
+            <div class="row">
+                <div class="column-2">
+                    <img class="center" id="cat-image" src="" alt="cat-photo">
+                </div>
+                <div class="column-2">
+                    <p class="ezaugarriak"><b>Sexua: </b><span id="sexua-sec" th:text="${form.sexua}"></span></p>
+                    <p class="ezaugarriak"><b>Adina: </b><span id="adina-sec" th:text="${form.adina}"></span></p>
+                    <p class="ezaugarriak"><b>Ilea: </b><span id="ilea-sec" th:text="${form.ilea}"></span></p>
+                    <p class="ezaugarriak"><b>Arraza: </b><span id="arraza-sec" th:text="${form.arraza}"></span></p>
+                    <p class="ezaugarriak"><b>Koloniaren kokapena: </b><span id="kol-kokapena-sec" th:text="${form.koloniaKokapena}"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>OSASUN-KONTROLA ETA ANTZUKETA</h1>
+            <!-- <h3>Antzuketa</h3> -->
+            <div class="row">
+                <div class="column-2">
+                    <p class="text-center"><b>Emea</b></p>
+                    <div class="row">
+                        <div class="column-2">
+                            <p>Ovario-histerectomia [<span id="ovario-histerectomia" th:if="${form.ovarioHisterectomia}">X</span>]</p>
+                        </div>
+                        <div class="column-2">
+                            <p>Ovariectomia [<span id="ovariectomia" th:if="${form.ovariectomia}">X</span>]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-2">
+                    <p class="text-center"><b>Arra</b></p>
+                    <p>Orquiectomia [<span id="orquiectomia" th:if="${form.orquiectomia}">X</span>]</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column-3">
+                    <p><b>Belarri-markaketa</b></p>
+                </div>
+                <div class="column-3">
+                    <p>Ezkerrean (Arra) [<span id="arra" th:if="${form.belarriEzkerrean}">X</span>]</p>
+                </div>
+                <div class="column-3">
+                    <p>Eskuinean (Emea) [<span id="emea" th:if="${form.belarriEskuinean}">X</span>]</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column-2">
+                    <p><b>Gaixotasun baten lorratzak edo sintomak</b></p>
+                </div>
+                <div class="column-2">
+                    <div class="row">
+                        <div class="column-2">
+                            <p>Bai [<span id="gaixorik-bai" th:if="${form.gaixotasunBai}">X</span>]</p>
+                        </div>
+                        <div class="column-2">
+                            <p>Ez [<span id="gaixorik-ez" th:if="${form.gaixotasunEz}">X</span>]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p><u>Lorratzen deskribapena:</u></p>
+            <span id="lorratzen-deskribapena" th:text="${form.lorratzenDeskribapena}"></span>
+        </div>
+    </section>
+    <footer>
+        <div class="section">
+            <h1>OSASUN-KONTROLAREN ONDORIOAK</h1>
+            <p class="text-centered">Oharra; <b>patologia sendaezinak edo animali-kolonia guztia arriskuan jarriko balu, katua eutanasiatua
+            izango litzateke. Erabaki honen zergaitiak bertan zehaztu beharko dira</b></p>
+            <div class="row">
+                <div class="column-3">
+                    <p>Alea aske bizitzeko gai [<span id="bizitzeko-gai" th:if="${form.bizitzekoGai}">X</span>]</p>
+                </div>
+                <div class="column-3">
+                    <p>Ez gai [<span id="bizitzeko-ez-gai" th:if="${form.bizitzekoEzGai}">X</span>]</p>
+                </div>
+                <div class="column-3">
+                    <p>Eutanasiatua [<span id="eutanasiatua" th:if="${form.eutanasiatua}">X</span>]</p>
+                </div>
+            </div>
+            <p><u>Arrazonamendua:</u></p>
+            <span id="arrazonamendua" th:text="${form.arrazonamendua}"></span>
+        </div>
+        <div class="row">
+            <div class="column-2">
+                <p><b>Albaitari ardunadunaren izena eta sinadura</b></p>
+            </div>
+            <div class="column-2">
+                <p><b>Albaitaritza klinikako zigilua</b></p>
+            </div>
+        </div>
+    </footer>
+</html>

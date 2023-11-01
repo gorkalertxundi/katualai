@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/catdoc" method="POST">
+        <h4>Datak</h4>
+        <p>Sarrera data: <input type="date" name="sarreraData" id="sarrera-data"></p>
+        <p>Irteera data: <input type="date" name="irteeraData" id="irteera-data"></p>
+        
+        <h4>Katuaren ezaugarriak</h4>
+        <p>Sexua: <input list="sexua" id="sexua" name="sexua"></p>
+        <datalist id="sexua">
+            <option value="Emea"></option>
+            <option value="Arra"></option>
+        </datalist>
+        <p>Adina: <input type="text" id="adina" name="adina"></p>
+        <p>Ilea: <input list="ilea" id="ilea" name="ilea"></p>
+        <datalist id="ilea">
+            <option value="Laranja"></option>
+            <option value="Txuria"></option>
+            <option value="Beix"></option>
+            <option value="Txuri-beltza"></option>
+            <option value="Txuri-laranja"></option>
+            <option value="Txuri-grisa"></option>
+            <option value="Beltz-txuria"></option>
+            <option value="Txuri-beltz eta marroia"></option>
+            <option value="Txuri-marroi eta grisa"></option>
+        </datalist>
+        <p>Arraza: <input list="arraza" id="arraza" name="arraza"></p>
+        <datalist id="arraza">
+            <option value="Europearra"></option>
+        </datalist>
+        <p>Koloniaren kokapena: <input type="text" id="koloniaKokapena" name="koloniaKokapena"></p>
+        <p><b>Katuaren argazkia: </b><input type="file" name="katuArgazkia" id="katuArgazkia"></p>
+        
+
+        <h4>Antzuketa</h4>
+        <section><input type="checkbox" name="ovarioHisterectomia" id="antzuketa-ovario-histerectomia">Ovario-histerectomia</section>
+        <section><input type="checkbox" name="ovariectomia" id="antzuketa-ovariectomia">Ovariectomia</section>
+        <section><input type="checkbox" name="orquiectomia" id="antzuketa-orquiectomia">Orquiectomia</section>
+
+        <h4>Belarri-markaketa</h4>
+        <section><input type="checkbox" name="belarriEzkerrean" id="belarri-ezkerrean">Ezkerrean (Arra)</section>
+        <section><input type="checkbox" name="belarriEskuinean" id="belarri-eskuinean">Eskuinean (Emea)</section>
+
+        <h4>Gaixotasun baten lorratzak edo sintomak</h4>
+        <section><input type="checkbox" name="gaixotasunBai" id="gaixotasun-bai">Bai</section>
+        <section><input type="checkbox" name="gaixotasunEz" id="gaixotasun-ez">Ez</section>
+        <label for="lorratzen-deskribapena"><u>Lorratzen deskribapena:</u></label><br>
+            <textarea id="lorratzen-deskribapena" name="lorratzenDeskribapena" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>
+        
+        <h4>Osasun kontrolaren ondorioak</h4>
+        <p>Bizi esperantza</p>
+        <section><input type="checkbox" name="bizitzekoGai" id="bizitzekoGai">Bizitzeko gai</section>
+        <section><input type="checkbox" name="bizitzekoEzGai" id="bizitzekoEzGai">Ez gai</section>
+        <section><input type="checkbox" name="eutanasiatua" id="eutanasiatua">Eutanasiatua</section>
+        <label for="arrazonamendua"><u>Arrazonamendua:</u></label><br>
+            <textarea id="arrazonamendua" name="arrazonamendua" placeholder="Idatzi hemen" cols="30" rows="5"></textarea>
+        
+        <br><br>
+        <input type="submit" value="Sortu fitxa">
+    </form>
+</body>
+</html>
